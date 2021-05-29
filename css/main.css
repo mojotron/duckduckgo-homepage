@@ -33,6 +33,23 @@ body {
   justify-content: center;
   align-items: center;
 }
+.search-form input {
+  font-size: 1.1rem;
+  height: 2.5rem;
+  background-color: #333333;
+  color: #eeeeee;
+}
+/* privacy info section*/
+.privacy-info-wrapper {
+  display: flex;
+}
+.privacy-info-box {
+  width: 332px;
+  height: 332px;
+  background-color: #282828;
+  border-radius: 18px;
+}
+
 /* question section */
 .question-section {
   background: var(--bg-col);

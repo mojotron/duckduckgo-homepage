@@ -31,12 +31,16 @@
 
     <section class="search-section">
       <figure>
-        <img src="img/duck_logo2.svg" width="350px" />
+        <img src="img/duck_logo.svg" width="350px" />
       </figure>
-      <h1>DuckDuckGo</h1>
-      <form>
-        <input type="text" />
-        <input type="submit" />
+      <form class="search-form">
+        <input
+          type="text"
+          name="search-bar"
+          placeholder="Search the web without being tracked"
+          required
+        />
+        <button type="submit"><i class="fas fa-search"></i></button>
       </form>
     </section>
 
@@ -56,22 +60,42 @@
 
     <section class="privacy-info">
       <h2>Privacy Protection For Any Device</h2>
-      <div class="privacy-info-box">
-        <figure></figure>
-        <h3>Privacy for Firefox</h3>
-        <p></p>
-      </div>
+      <div class="privacy-info-wrapper">
+        <div class="privacy-info-box">
+          <figure>
+            <img src="img/laptop.svg" />
+          </figure>
+          <h3>Privacy for Firefox</h3>
+          <p>
+            Browse as usual, and we'll take care of the rest. We bundled our
+            search engine, tracker blocker, and encryption enforcer into one
+            <a href="#">Firefox Extension.</a>
+          </p>
+        </div>
 
-      <div class="privacy-info-box">
-        <figure></figure>
-        <h3>Private Search Engine</h3>
-        <p></p>
-      </div>
+        <div class="privacy-info-box">
+          <figure>
+            <img src="img/search.svg" />
+          </figure>
+          <h3>Private Search Engine</h3>
+          <p>
+            Search privately with our app or extension, add private web search
+            to your favorite browser, or search directly at
+            <a href="#">duckduckgo.com</a>.
+          </p>
+        </div>
 
-      <div class="privacy-info-box">
-        <figure></figure>
-        <h3>Privacy Browser App</h3>
-        <p></p>
+        <div class="privacy-info-box">
+          <figure>
+            <img src="img/mobile.svg" />
+          </figure>
+          <h3>Privacy Browser App</h3>
+          <p>
+            Our private browser for mobile comes equipped with our search
+            engine, tracker blocker, encryption enforcer, and more.
+            <a href="#">Available on iOS & Android</a>.
+          </p>
+        </div>
       </div>
     </section>
 
