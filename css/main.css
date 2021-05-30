@@ -13,6 +13,21 @@ a {
   text-decoration: none;
   color: #678fff;
 }
+.btn-default {
+  display: block;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 700;
+  height: 43px;
+  min-height: 44px;
+  margin: 20px auto;
+  background-color: #678fff;
+  border-color: #678fff;
+  border-width: 0;
+  border-radius: 10px;
+  color: #e5e5e5;
+  padding: 2px 1.5rem;
+}
 /* header icons */
 .header-icons {
   display: flex;
@@ -51,6 +66,41 @@ a {
   justify-content: center;
   align-items: center;
 }
+.product-info h2 {
+  font-weight: 800;
+  padding: 0 0 5px;
+  font-size: 2rem;
+  line-height: 44px;
+  text-align: center;
+}
+.product-info p {
+  font-size: 1.1rem;
+  line-height: 28px;
+}
+.product-info-spans {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 28px;
+}
+.product-info-spans span {
+  display: inline-block;
+  margin: 10px 20px;
+}
+.product-info-spans span::before {
+  display: inline-block;
+  box-sizing: border-box;
+  content: "✓";
+  font-size: 0.9rem;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #678fff;
+  position: relative;
+  right: 5px;
+  line-height: 18px;
+  padding-left: 3px;
+}
+
 /* privacy info section*/
 .privacy-info h2 {
   text-align: center;
@@ -137,6 +187,12 @@ a {
 .information-info img {
   max-width: 890px;
   height: auto;
+}
+.btn-info-info {
+  background-color: #356e58;
+}
+.btn-info-info:hover {
+  background-color: #2c5b48;
 }
 
 /* question section */
