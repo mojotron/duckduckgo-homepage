@@ -44,7 +44,22 @@ a {
   background-color: #333333;
   color: #eeeeee;
 }
+/* product info section */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* privacy info section*/
+.privacy-info h2 {
+  text-align: center;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 1.05rem;
+  position: relative;
+  top: 180px;
+}
 .privacy-info-wrapper {
   box-sizing: border-box;
   display: flex;
@@ -119,11 +134,17 @@ a {
   line-height: 1.7rem;
   padding: 0 0.25rem;
 }
+.information-info img {
+  max-width: 890px;
+  height: auto;
+}
 
 /* question section */
 .question-section {
   background: var(--bg-col);
   color: var(--font-col);
+  max-width: 780px;
+  margin: 100px auto 40px;
 }
 .question-section h2 {
   font-size: 2rem;
@@ -131,4 +152,36 @@ a {
   text-align: center;
   line-height: 2rem;
   font-weight: 800;
+}
+.question {
+  border-top: 1px solid #e5e5e5;
+  padding-left: 50px;
+}
+.question h3 {
+  font-size: 1.3rem;
+  line-height: 25px;
+  font-weight: 600;
+  padding: 25px 0;
+}
+.question h3::before {
+  display: inline-block;
+  box-sizing: border-box;
+  content: "ˆ"; /*ˇ*/
+  font-size: 35px;
+  font-weight: 100;
+  position: relative;
+  line-height: 20px;
+  right: 50px;
+  top: 18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  color: #767782;
+  padding: 12px 0 0 5px;
+}
+.question p {
+  padding: 0.25rem 0 30px;
+  line-height: 27px;
+  letter-spacing: -0.07px;
 }
