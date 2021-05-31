@@ -18,15 +18,15 @@
     <title>DuckDuckGo Homepage | fake one</title>
   </head>
   <body>
-    <header>
-      <div class="header-icons">
-        <ul>
-          <li>
-            <a href="#"><i class="fas fa-bullhorn"></i></a>
-          </li>
-          <li><a href="#"></a><i class="fas fa-bars"></i></li>
-        </ul>
-      </div>
+    <header class="header-icons">
+      <ul>
+        <li>
+          <a href="#" class="bullhorn-icon"><i class="fas fa-bullhorn"></i></a>
+        </li>
+        <li>
+          <a href="#" class="bars-icon"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
     </header>
 
     <section class="search-section">
@@ -41,6 +41,7 @@
           placeholder="Search the web without being tracked"
           required
         />
+        <!-- <input class="btn-search-bar" type="submit" value="" /> -->
         <button class="btn-search-bar" type="submit">
           <i class="fas fa-search"></i>
         </button>
@@ -209,7 +210,7 @@
         </p>
       </div>
 
-      <div class="question">
+      <div class="question last-question">
         <h3>How does the DuckDuckGo app & extension work?</h3>
         <p>
           The DuckDuckGo Privacy Browser mobile app and Privacy Essentials
@@ -222,7 +223,9 @@
         </p>
       </div>
 
-      <button class="btn-default">Add DuckDuckGo to Firefox</button>
+      <button class="btn-default btn-question-section">
+        Add DuckDuckGo to Firefox
+      </button>
     </section>
   </body>
 </html>
