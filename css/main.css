@@ -133,7 +133,26 @@ a {
   line-height: 18px;
   padding-left: 3px;
 }
+.product-info a {
+  color: #eeeeee;
+}
 .product-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stars {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  width: 63px;
+  overflow-x: hidden;
+  margin-right: 20px;
+}
+.rating {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 /* privacy info section*/
 .privacy-info h2 {
