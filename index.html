@@ -18,6 +18,73 @@
     <title>DuckDuckGo Homepage | fake one</title>
   </head>
   <body>
+    <div class="overlay hidden"></div>
+    <div class="social-modal hidden">
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Reddit</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <div class="settings-modal hidden">
+      <div class="settings-list">
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+
+      <div class="settings-list">
+        <div class="close-settings"></div>
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+
+      <div class="settings-list">
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+
+      <div class="settings-list">
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+
+      <div class="settings-list">
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+
+      <div class="settings-list">
+        <h3>LOREM</h3>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+    </div>
+
     <header class="header-icons">
       <ul>
         <li>
@@ -227,5 +294,27 @@
         Add DuckDuckGo to Firefox
       </button>
     </section>
+
+    <script>
+      const overlay = document.querySelector(".overlay");
+      const socialModal = document.querySelector(".social-modal");
+      const settingModal = document.querySelector(".settings-modal");
+      const bullhorn = document.querySelector(".bullhorn-icon");
+      const bars = document.querySelector(".bars-icon");
+
+      bullhorn.addEventListener("click", function () {
+        socialModal.classList.toggle("hidden");
+      });
+
+      bars.addEventListener("click", function () {
+        settingModal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      });
+
+      overlay.addEventListener("click", function () {
+        settingModal.classList.add("hidden");
+        overlay.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
