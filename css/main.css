@@ -33,7 +33,6 @@ a {
 }
 /* settings-modal */
 .settings-modal {
-  border: 1px solid gold;
   width: 200px;
   height: 100vh;
   position: fixed;
@@ -44,6 +43,8 @@ a {
   box-sizing: border-box;
   border: 1px solid #282828;
   border-radius: 4px;
+  padding-top: 10px;
+  overflow: scroll;
 }
 /* social modal */
 .social-modal {
@@ -63,13 +64,27 @@ a {
   padding: 10px 10px 0 10px;
   box-shadow: 1px 1px 1px 1px #131313;
 }
-.social-modal a {
+.settings-list {
+  margin-bottom: 18px;
+}
+.social-modal a,
+.settings-list a {
+  font-size: 0.8rem;
   display: inline-block;
   color: var(--font-col);
   padding-bottom: 10px;
 }
-.social-modal a:hover {
+.social-modal a:hover,
+.settings-list a:hover {
   text-decoration: underline;
+}
+.settings-list h3 {
+  font-weight: 400;
+  font-size: 0.65rem;
+  padding-bottom: 10px;
+}
+.settings-list {
+  padding: 10px;
 }
 .overlay {
   position: fixed;
@@ -214,7 +229,7 @@ a {
   background-color: var(--link-col);
   position: relative;
   right: 5px;
-  line-height: 1.2rem;
+  line-height: 1.1rem;
   padding-left: 3px;
 }
 .product-info a {
