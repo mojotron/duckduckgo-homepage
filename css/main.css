@@ -376,8 +376,10 @@ a {
   font-weight: 800;
 }
 .question {
+  width: 100%;
   border-top: 1px solid #e5e5e5;
   padding-left: 50px;
+  cursor: pointer;
 }
 .question h3 {
   font-size: 1.3rem;
@@ -388,7 +390,7 @@ a {
 .question h3::before {
   display: inline-block;
   box-sizing: border-box;
-  content: "ˆ"; /*ˇ*/
+  content: "ˇ"; /*ˇ ˆ*/
   font-size: 35px;
   font-weight: 100;
   position: relative;
@@ -400,6 +402,13 @@ a {
   border-radius: 50%;
   background-color: #e5e5e5;
   color: #767782;
+  padding: 15px 5px 0 0;
+}
+.active {
+  cursor: default;
+}
+.question.active h3::before {
+  content: "ˆ";
   padding: 12px 0 0 5px;
 }
 .question p {
@@ -412,6 +421,9 @@ a {
 }
 .btn-question-section {
   margin-top: 50px;
+}
+.question-hide-para {
+  display: none;
 }
 
 @media (max-width: 786px) {

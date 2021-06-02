@@ -187,7 +187,7 @@
 
     <section class="question-section">
       <h2>Frequently Asked Questions</h2>
-      <div class="question">
+      <div class="question active">
         <h3>How does DuckDuckGo make money?</h3>
         <p>
           We make our money from private ads on our search engine. On other
@@ -202,7 +202,7 @@
 
       <div class="question">
         <h3>What does Google know about me?</h3>
-        <p>
+        <p class="question-hide-para">
           Not only does Google keep your search history forever by default,
           their trackers have been found on 75% of the top million websites,
           which means they are tracking most everywhere you go on the Internet
@@ -213,7 +213,7 @@
 
       <div class="question">
         <h3>Why use DuckDuckGo instead of Google?</h3>
-        <p>
+        <p class="question-hide-para">
           Ever notice ads constantly following you around? That’s in part
           because Google tracks your searches and hides trackers on millions of
           websites. By contrast, our private search engine doesn’t track your
@@ -230,7 +230,7 @@
 
       <div class="question">
         <h3>How do DuckDuckGo search results compare to Google’s?</h3>
-        <p>
+        <p class="question-hide-para">
           DuckDuckGo search gives you truly private search results without
           tradeoffs in result quality. We have everything you’ve come to expect
           in an online search experience, and a few
@@ -245,7 +245,7 @@
         <h3>
           What’s the difference between using DuckDuckGo and Incognito mode?
         </h3>
-        <p>
+        <p class="question-hide-para">
           It is a myth that you can’t be tracked while using so-called
           “Incognito” mode. In fact, Incognito mode mainly just deletes
           information on your computer and does nothing to stop Google from
@@ -259,7 +259,7 @@
 
       <div class="question">
         <h3>How popular is DuckDuckGo?</h3>
-        <p>
+        <p class="question-hide-para">
           We don’t track our users, so it’s actually impossible for us to know
           how many users in total are using our products. However, we are able
           to make an estimate based on the number of searches we get per month,
@@ -270,7 +270,7 @@
 
       <div class="question last-question">
         <h3>How does the DuckDuckGo app & extension work?</h3>
-        <p>
+        <p class="question-hide-para">
           The DuckDuckGo Privacy Browser mobile app and Privacy Essentials
           desktop extension both come with our best-in-class tracker blocker,
           encryption enforcer, and private search engine – all in one simple
@@ -292,6 +292,23 @@
       const settingModal = document.querySelector(".settings-modal");
       const bullhorn = document.querySelector(".bullhorn-icon");
       const bars = document.querySelector(".bars-icon");
+
+      const questions = document.querySelectorAll(".question");
+      for (let question of questions) {
+        //https://dev.to/mohdhussein/how-to-show-the-clicked-element-only-and-hide-others-in-vanilla-javascript-1ip2
+        question.addEventListener("click", (e) => {
+          const current = e.target;
+          const active = document.querySelector(".active");
+
+          active.classList.remove("active");
+          active.firstElementChild.nextElementSibling.classList.add(
+            "question-hide-para"
+          );
+
+          current.parentElement.classList.add("active");
+          current.nextElementSibling.classList.remove("question-hide-para");
+        });
+      }
 
       bullhorn.addEventListener("click", function () {
         socialModal.classList.toggle("hidden");
