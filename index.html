@@ -28,7 +28,7 @@
       </ul>
     </div>
 
-    <div class="settings-modal hidden">
+    <div class="settings-modal hidden slide-in-1">
       <div class="settings-list">
         <h3>SETTINGS</h3>
         <ul>
@@ -322,6 +322,14 @@
       overlay.addEventListener("click", function () {
         settingModal.classList.add("hidden");
         overlay.classList.add("hidden");
+
+        if (settingModal.classList.contains("slide-in-2")) {
+          settingModal.classList.remove("slide-in-2");
+          settingModal.classList.add("slide-in-1");
+        } else {
+          settingModal.classList.remove("slide-in-1");
+          settingModal.classList.add("slide-in-2");
+        }
       });
     </script>
   </body>

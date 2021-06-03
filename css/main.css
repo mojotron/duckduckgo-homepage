@@ -46,6 +46,32 @@ a {
   padding-top: 10px;
   overflow: scroll;
 }
+.slide-in-1 {
+  animation-duration: 2s;
+  animation-name: slide-in-1;
+}
+.slide-in-2 {
+  animation-duration: 2s;
+  animation-name: slide-in-2;
+}
+/* two same animation to toggle between them for applying slide in effect on every click*/
+@keyframes slide-in-1 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes slide-in-2 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
 /* social modal */
 .social-modal {
   background: #282828;
