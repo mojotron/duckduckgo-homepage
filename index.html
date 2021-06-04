@@ -28,8 +28,9 @@
       </ul>
     </div>
 
-    <div class="settings-modal hidden slide-in-1">
+    <div class="settings-modal hidden">
       <div class="settings-list">
+        <span class="btn-close">X</span>
         <h3>SETTINGS</h3>
         <ul>
           <li><a href="#">Themes</a></li>
@@ -292,6 +293,7 @@
       const settingModal = document.querySelector(".settings-modal");
       const bullhorn = document.querySelector(".bullhorn-icon");
       const bars = document.querySelector(".bars-icon");
+      const closeBtn = document.querySelector(".btn-close");
 
       const questions = document.querySelectorAll(".question");
       for (let question of questions) {
@@ -315,11 +317,31 @@
       });
 
       bars.addEventListener("click", function () {
+        if (
+          !settingModal.classList.contains("slide-in-1") &&
+          !settingModal.classList.contains("slide-in-2")
+        ) {
+          settingModal.classList.add("slide-in-1");
+        }
+
         settingModal.classList.remove("hidden");
         overlay.classList.remove("hidden");
       });
 
       overlay.addEventListener("click", function () {
+        settingModal.classList.add("hidden");
+        overlay.classList.add("hidden");
+
+        if (settingModal.classList.contains("slide-in-2")) {
+          settingModal.classList.remove("slide-in-2");
+          settingModal.classList.add("slide-in-1");
+        } else {
+          settingModal.classList.remove("slide-in-1");
+          settingModal.classList.add("slide-in-2");
+        }
+      });
+
+      closeBtn.addEventListener("click", function () {
         settingModal.classList.add("hidden");
         overlay.classList.add("hidden");
 

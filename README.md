@@ -1,4 +1,4 @@
-# DuckDuckGO Homepage clone
+# DuckDuckGO Homepage
 
 This project is part of The [Odin Project curriculum](https://www.theodinproject.com). The assignment was to make
 Google homepage, which i already made a couple of years ago. Soon after that, I stopped with

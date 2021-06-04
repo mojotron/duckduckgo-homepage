@@ -30,6 +30,10 @@ a {
   border-radius: 10px;
   color: #e5e5e5;
   padding: 2px 1.5rem;
+  z-index: 100;
+}
+.btn-default:hover {
+  cursor: pointer;
 }
 /* settings-modal */
 .settings-modal {
@@ -47,11 +51,11 @@ a {
   overflow: scroll;
 }
 .slide-in-1 {
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: slide-in-1;
 }
 .slide-in-2 {
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: slide-in-2;
 }
 /* two same animation to toggle between them for applying slide in effect on every click*/
@@ -112,6 +116,17 @@ a {
 }
 .settings-list {
   padding: 10px;
+}
+.btn-close {
+  color: var(--font-col);
+  font-size: 1.2rem;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.btn-close:hover {
+  cursor: pointer;
 }
 .overlay {
   position: fixed;
