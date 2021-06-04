@@ -55,6 +55,7 @@ a {
   animation-name: slide-in-2;
 }
 /* two same animation to toggle between them for applying slide in effect on every click*/
+/* https://stackoverflow.com/questions/39790438/css-animation-works-only-first-time */
 @keyframes slide-in-1 {
   0% {
     right: -100%;
