@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>DuckDuckGo Homepage | fake one</title>
+    <script defer src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="overlay hidden"></div>
@@ -286,73 +287,5 @@
         Add DuckDuckGo to Firefox
       </button>
     </section>
-
-    <script>
-      const overlay = document.querySelector(".overlay");
-      const socialModal = document.querySelector(".social-modal");
-      const settingModal = document.querySelector(".settings-modal");
-      const bullhorn = document.querySelector(".bullhorn-icon");
-      const bars = document.querySelector(".bars-icon");
-      const closeBtn = document.querySelector(".btn-close");
-
-      const questions = document.querySelectorAll(".question");
-      for (let question of questions) {
-        //https://dev.to/mohdhussein/how-to-show-the-clicked-element-only-and-hide-others-in-vanilla-javascript-1ip2
-        question.addEventListener("click", (e) => {
-          const current = e.target;
-          const active = document.querySelector(".active");
-
-          active.classList.remove("active");
-          active.firstElementChild.nextElementSibling.classList.add(
-            "question-hide-para"
-          );
-
-          current.parentElement.classList.add("active");
-          current.nextElementSibling.classList.remove("question-hide-para");
-        });
-      }
-
-      bullhorn.addEventListener("click", function () {
-        socialModal.classList.toggle("hidden");
-      });
-
-      bars.addEventListener("click", function () {
-        if (
-          !settingModal.classList.contains("slide-in-1") &&
-          !settingModal.classList.contains("slide-in-2")
-        ) {
-          settingModal.classList.add("slide-in-1");
-        }
-
-        settingModal.classList.remove("hidden");
-        overlay.classList.remove("hidden");
-      });
-
-      overlay.addEventListener("click", function () {
-        settingModal.classList.add("hidden");
-        overlay.classList.add("hidden");
-
-        if (settingModal.classList.contains("slide-in-2")) {
-          settingModal.classList.remove("slide-in-2");
-          settingModal.classList.add("slide-in-1");
-        } else {
-          settingModal.classList.remove("slide-in-1");
-          settingModal.classList.add("slide-in-2");
-        }
-      });
-
-      closeBtn.addEventListener("click", function () {
-        settingModal.classList.add("hidden");
-        overlay.classList.add("hidden");
-
-        if (settingModal.classList.contains("slide-in-2")) {
-          settingModal.classList.remove("slide-in-2");
-          settingModal.classList.add("slide-in-1");
-        } else {
-          settingModal.classList.remove("slide-in-1");
-          settingModal.classList.add("slide-in-2");
-        }
-      });
-    </script>
   </body>
 </html>

@@ -30,7 +30,7 @@ a {
   border-radius: 10px;
   color: #e5e5e5;
   padding: 2px 1.5rem;
-  z-index: 100;
+  z-index: 96;
 }
 .btn-default:hover {
   cursor: pointer;
@@ -469,6 +469,9 @@ a {
 }
 
 @media (max-width: 786px) {
+  .btn-default:active {
+    cursor: pointer;
+  }
   .search-form {
     width: 98%;
   }
