@@ -109,6 +109,25 @@ a {
 .settings-list a:hover {
   text-decoration: underline;
 }
+.social-modal a i {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  position: relative;
+  top: 2px;
+}
+.twitter-icon {
+  color: #08a0e9;
+}
+.reddit-icon {
+  color: #ff5700;
+}
+.blog-icon {
+  color: #8249e4;
+}
+.newsletter-icon {
+  color: #fba42d;
+}
 .settings-list h3 {
   font-weight: 400;
   font-size: 0.65rem;

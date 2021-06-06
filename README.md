@@ -38,6 +38,7 @@ View my fake [DuckDuckGo homepage](https://mojotron.github.io/duckduckgo-homepag
 - Planning project - going without plan makes coding much more difficult, from
   naming do display problems. Simple diagrams makes building project fun, and not
   searching your way out of a maze you built around you.
+- Using [fontawesome](https://fontawesome.com/) for icons - local installation and cdn option
 
 ### Biggest Roadblocks and recourses
 
